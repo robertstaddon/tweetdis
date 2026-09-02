@@ -6,11 +6,11 @@
  * Plugin Name:       Tweet Dis
  * Plugin URI:        https://github.com/robertstaddon/tweetdis
  * Description:       Creates click-to-tweet quotes, hints, and images from existing TweetDis shortcodes.
- * Version:           4.0.0
+ * Version:           4.0.1
  * Requires at least: 5.8
  * Requires PHP:      8.0
- * Author:            Tim Soulo
- * Author URI:        https://github.com/robertstaddon/tweetdis
+ * Author:            Abundant Designs
+ * Author URI:        https://www.abundantdesigns.com
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
  * Text Domain:       tweetdis
@@ -35,7 +35,7 @@ register_activation_hook( __FILE__, 'activate_tweetdis' );
 function run_tweetdis() {
 
 	require_once plugin_dir_path( __FILE__ ) . 'includes/tweetdis.php';
-	$plugin = new Tweetdis( plugin_basename( __FILE__ ), '4.0.0' );
+	$plugin = new Tweetdis( plugin_basename( __FILE__ ), '4.0.1' );
 	$plugin->run();
 
 }

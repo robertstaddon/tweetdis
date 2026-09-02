@@ -36,7 +36,7 @@ if (!isset($settings_page)) {
                     <div class="tweetdis_img_container"><img src="<?= $image_url ?>"/></div>
                     <div class="tweetdis_click_to_tweet twitter_standard <?= ($image_template_settings['button_size'] === 'large')? 'twitter_large':'' ?> position_<?=  $image_template_settings['position'] ?> tweetdis_clearfix">
                         <a class="tweetdis_image_link" href="#" <?php if (!$settings_page): ?>onclick="window.open('<?=  $tweet_link ?>', '_blank', 'width=500,height=500'); return false;"<?php endif; ?>>
-                            <i></i><span>Tweet</span>
+                            <i></i><span>Share</span>
                         </a>
                         <span class="tweetdis_action"><?= $image_template_settings['callforaction'] ?></span>
                     </div>

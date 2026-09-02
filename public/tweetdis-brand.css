@@ -1,0 +1,26 @@
+/* Replace the old Twitter bird sprite with the X logo. */
+
+.tweetdis_hint a .tweetdis_hint_icon,
+.tweetdis_box a.tweetdis_box_link .tweetdis_click_to_tweet i,
+.tweetdis_box a.tweetdis_box_link.tweetdis_box_15_at p span.tweetdis_wrapper i,
+.tweetdis_image .tweetdis_click_to_tweet i,
+.tweetdis_image .tweetdis_click_to_tweet.twitter_standard i,
+.tweetdis_image .tweetdis_click_to_tweet.twitter_standard.twitter_large i,
+.tweetdis_image_template_5 .tweetdis_click_to_tweet i,
+.tweetdis_image_template_6 .tweetdis_click_to_tweet i,
+.tweetdis_box a.tweetdis_box_link.tweetdis_box_08 p:before,
+.tweetdis_box a.tweetdis_box_link.tweetdis_box_09 p:before,
+.tweetdis_box a.tweetdis_box_link.tweetdis_box_11 .tweetdis_click_to_tweet:after,
+.tweetdis_image_template_3 .tweetdis_action:before,
+.tweetdis_image_template_3 .tweetdis_action:after {
+	background-image: none !important;
+	background-color: currentColor;
+	-webkit-mask-image: url("../assets/images/x-logo.svg");
+	mask-image: url("../assets/images/x-logo.svg");
+	-webkit-mask-repeat: no-repeat;
+	mask-repeat: no-repeat;
+	-webkit-mask-position: center;
+	mask-position: center;
+	-webkit-mask-size: contain;
+	mask-size: contain;
+}

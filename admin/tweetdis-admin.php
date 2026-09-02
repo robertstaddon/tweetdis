@@ -55,6 +55,7 @@ class Tweetdis_Admin {
 
 		wp_register_style( $this->plugin_name . '-admin', plugin_dir_url( __FILE__ ) . 'tweetdis-admin.min.css', array(), $this->version );
 		wp_register_style( $this->plugin_name . '-modal', plugin_dir_url( __FILE__ ) . 'tweetdis-mce.min.css', array(), $this->version );
+		wp_register_style( $this->plugin_name . '-brand', plugin_dir_url( dirname( __FILE__ ) ) . 'public/tweetdis-brand.css', array( $this->plugin_name . '-admin' ), $this->version );
 		wp_register_script( $this->plugin_name . '-admin', plugin_dir_url( __FILE__ ) . 'tweetdis-admin.min.js', array( 'jquery' ), $this->version, true );
 
 	}
@@ -65,6 +66,7 @@ class Tweetdis_Admin {
 	public function enqueue_style() {
 
 		wp_enqueue_style( $this->plugin_name . '-admin' );
+		wp_enqueue_style( $this->plugin_name . '-brand' );
 
 	}
 

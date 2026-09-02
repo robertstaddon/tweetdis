@@ -81,7 +81,7 @@ class Tweetdis_Activator {
 
 		$styles = array();
 
-		$default_callforaction = 'Click to tweet';
+		$default_callforaction = 'Click to share';
 		$color_settings        = array(
 			array( '#e5e5e5', '#eff1e5', '#9cccec' ),
 			array( '#ffffff', '#eff1e5', '#f7f7f7' ),
@@ -138,7 +138,7 @@ class Tweetdis_Activator {
 
 		$styles = array();
 
-		$default_callforaction = 'Tweet';
+		$default_callforaction = 'Share';
 
 		for ( $i = 1; $i < 7; $i++ ) {
 

@@ -1,13 +1,18 @@
 === tweetdis ===
+Contributors: abundantdesigns
 Tags: tweetdis, tweet, wordpress plugin, tweetable quotes, content
+Donate link: https://github.com/robertstaddon/tweetdis
 Requires at least: 5.8
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 4.0.0
+Stable tag: 4.0.1
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
 TweetDis creates click-to-tweet quotes in your articles from existing [tweet_box], [tweet_dis], and [tweet_dis_img] shortcodes.
+
+Maintained by Abundant Designs (https://www.abundantdesigns.com). Source: https://github.com/robertstaddon/tweetdis
+Originally created by Tim Soulo (https://www.tweetdis.com/).
 
 == Installation ==
 **To install the plugin manually in WordPress:**
@@ -33,6 +38,12 @@ No. Version 4.0.0 is a local, license-free renderer for existing TweetDis shortc
 No. Click-to-tweet links open the X / Twitter web compose window. There is no API integration.
 
 == Changelog ==
+= 4.0.1 =
+* Maintainer is now Abundant Designs
+* Default call to action is "Click to share"
+* Twitter bird icon replaced with the X logo
+* Added a GitHub README with credits to the original author
+
 = 4.0.0 =
 * PHP 8.3 compatibility (fixes mb_strrpos TypeError)
 * Removed license activation and remote update checks

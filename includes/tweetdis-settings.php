@@ -156,7 +156,11 @@ class Tweetdis_Settings {
 	public function get_box_settings( $preset ) {
 
 		if ( isset( $this->box_settings[ $preset ] ) && is_array( $this->box_settings[ $preset ] ) ) {
-			return $this->box_settings[ $preset ];
+			$settings = $this->box_settings[ $preset ];
+			if ( isset( $settings['callforaction'] ) ) {
+				$settings['callforaction'] = $this->normalize_call_to_action( $settings['callforaction'] );
+			}
+			return $settings;
 		}
 
 		$default = $this->get_default_box();
@@ -165,7 +169,7 @@ class Tweetdis_Settings {
 		}
 
 		return array(
-			'callforaction'    => 'Click to tweet',
+			'callforaction'    => 'Click to share',
 			'font_size'        => 'original',
 			'colors'           => array(),
 			'color_number'     => 0,
@@ -236,7 +240,11 @@ class Tweetdis_Settings {
 		}
 
 		if ( isset( $this->image_settings[ $preset ] ) && is_array( $this->image_settings[ $preset ] ) ) {
-			return $this->image_settings[ $preset ];
+			$settings = $this->image_settings[ $preset ];
+			if ( isset( $settings['callforaction'] ) ) {
+				$settings['callforaction'] = $this->normalize_call_to_action( $settings['callforaction'] );
+			}
+			return $settings;
 		}
 
 		return array(
@@ -244,7 +252,7 @@ class Tweetdis_Settings {
 			'image_txt'     => 'blank',
 			'position'      => 'center',
 			'button_size'   => 'original',
-			'callforaction' => 'Tweet',
+			'callforaction' => 'Share',
 			'default'       => true,
 		);
 	}
@@ -554,6 +562,31 @@ class Tweetdis_Settings {
 		$this->tweet_settings = $settings;
 		update_option( 'tweetdis_tweet_settings', $this->tweet_settings );
 
+	}
+
+	/**
+	 * Replace legacy Twitter CTA copy with share wording.
+	 *
+	 * @param string $text Call to action text.
+	 * @return string
+	 */
+	private function normalize_call_to_action( $text ) {
+
+		if ( ! is_string( $text ) ) {
+			return 'Click to share';
+		}
+
+		$normalized = strtolower( trim( $text ) );
+
+		if ( $normalized === 'click to tweet' ) {
+			return 'Click to share';
+		}
+
+		if ( $normalized === 'tweet' ) {
+			return 'Share';
+		}
+
+		return $text;
 	}
 
 	/**

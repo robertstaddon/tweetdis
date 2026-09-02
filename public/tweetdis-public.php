@@ -45,16 +45,18 @@ class Tweetdis_Public {
 	public function register_style() {
 
 		wp_register_style( $this->plugin_name . '-public', plugin_dir_url( __FILE__ ) . 'tweetdis-public.min.css', array(), $this->version );
-                
+		wp_register_style( $this->plugin_name . '-brand', plugin_dir_url( __FILE__ ) . 'tweetdis-brand.css', array( $this->plugin_name . '-public' ), $this->version );
+
 	}
-        
-        /**
+
+	/**
 	 * Enqueue public stylesheet
 	 */
 	public function enqueue_style() {
 
-                wp_enqueue_style( $this->plugin_name . '-public');
-                
+		wp_enqueue_style( $this->plugin_name . '-public' );
+		wp_enqueue_style( $this->plugin_name . '-brand' );
+
 	}
         
         /**

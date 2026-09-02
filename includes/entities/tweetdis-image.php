@@ -68,7 +68,7 @@ class Tweetdis_Image extends Tweetdis_Entity {
 
 		if ( is_feed() ) {
 			$layout = $comment . '<img src="' . esc_url( $this->image_url ) . '"/>
-                        <br><a href="' . esc_url( $tweet_link ) . '" target="_blank">[tweet this image]</a><br>';
+                        <br><a href="' . esc_url( $tweet_link ) . '" target="_blank">[share this image]</a><br>';
 		} else {
 			$image_template_settings = $this->settings->get_image_settings();
 			$image_template_name     = $this->settings->get_default_image();
