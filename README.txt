@@ -5,7 +5,7 @@ Donate link: https://github.com/robertstaddon/tweetdis
 Requires at least: 5.8
 Tested up to: 6.8
 Requires PHP: 8.0
-Stable tag: 4.0.1
+Stable tag: 4.0.2
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
@@ -38,6 +38,10 @@ No. Version 4.0.0 is a local, license-free renderer for existing TweetDis shortc
 No. Click-to-tweet links open the X / Twitter web compose window. There is no API integration.
 
 == Changelog ==
+= 4.0.2 =
+* Image Template 5 tweet button uses an almost-black background with a white X icon
+* Template 5 button turns fully black on hover when Hover action is Dark
+
 = 4.0.1 =
 * Maintainer is now Abundant Designs
 * Default call to action is "Click to share"

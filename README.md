@@ -52,6 +52,11 @@ The settings screen still lets you choose:
 
 Share links always use the post permalink, or the `url` attribute on the shortcode if you set one.
 
+## What changed in 4.0.2
+
+- Image Template 5 tweet button uses an almost-black background with a white X icon
+- Template 5 button turns fully black on hover when Hover action is Dark
+
 ## What changed in 4.0.1
 
 - Maintainer is now [Abundant Designs](https://www.abundantdesigns.com)

@@ -24,3 +24,26 @@
 	-webkit-mask-size: contain;
 	mask-size: contain;
 }
+
+/* Template 5: X-branded almost-black button, white icon and text. */
+.tweetdis_image_template_5 .tweetdis_click_to_tweet a.tweetdis_image_link {
+	background: #1a1a1a;
+	filter: none;
+	border-bottom-color: #000;
+	color: #fff;
+}
+
+.tweetdis_image_template_5 .tweetdis_click_to_tweet a.tweetdis_image_link:hover {
+	background: #111;
+	filter: none;
+	color: #fff;
+}
+
+.tweetdis_image.tweetdis_hover_dark.tweetdis_image_template_5 .tweetdis_click_to_tweet a.tweetdis_image_link:hover {
+	background: #000;
+}
+
+.tweetdis_image_template_5 .tweetdis_click_to_tweet a.tweetdis_image_link span,
+.tweetdis_image_template_5 .tweetdis_click_to_tweet i {
+	color: #fff;
+}
